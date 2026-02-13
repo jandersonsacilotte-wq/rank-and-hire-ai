@@ -5,6 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import HowItWorks from "@/components/HowItWorks";
 import BenefitsSection from "@/components/BenefitsSection";
 import DifferentialSection from "@/components/DifferentialSection";
+import PricingSection from "@/components/PricingSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ const Index = () => {
         <HowItWorks />
         <BenefitsSection />
         <DifferentialSection />
+        <PricingSection />
         <FinalCTA />
       </main>
       <Footer />
