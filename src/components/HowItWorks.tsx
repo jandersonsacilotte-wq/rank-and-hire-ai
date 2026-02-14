@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
-import { FileText, Upload, Brain, Trophy, X, Check, AlertCircle } from "lucide-react";
+import { FileText, Upload, Brain, Trophy, X, Check, AlertCircle, MapPin, GraduationCap } from "lucide-react";
+import avatarRoberto from "@/assets/avatar-roberto.jpg";
+import avatarLucas from "@/assets/avatar-lucas.jpg";
+import avatarCamila from "@/assets/avatar-camila.jpg";
+import avatarMarcos from "@/assets/avatar-marcos.jpg";
 
 const candidates = [
-  { initials: "AS", name: "Ana Silva", time: "PDF • 10:42 AM", score: 95, color: "bg-emerald-500" },
-  { initials: "RC", name: "Roberto Costa", time: "PDF • 09:15 AM", score: 82, color: "bg-blue-500" },
-  { initials: "LM", name: "Lucas Mendes", time: "PDF • 08:30 AM", score: 74, color: "bg-violet-500" },
-  { initials: "CF", name: "Camila Ferreira", time: "PDF • Ontem", score: 61, color: "bg-amber-500" },
-  { initials: "MJ", name: "Marcos Jr.", time: "PDF • Ontem", score: 15, color: "bg-rose-500" },
+  { name: "Ana Silva", time: "PDF • 10:42 AM", score: 95, avatar: null, initials: "AS", color: "bg-emerald-500" },
+  { name: "Roberto Costa", time: "PDF • 09:15 AM", score: 82, avatar: avatarRoberto, initials: "RC", color: "bg-blue-500" },
+  { name: "Lucas Mendes", time: "PDF • 08:30 AM", score: 74, avatar: avatarLucas, initials: "LM", color: "bg-violet-500" },
+  { name: "Camila Ferreira", time: "PDF • Ontem", score: 61, avatar: avatarCamila, initials: "CF", color: "bg-amber-500" },
+  { name: "Marcos Jr.", time: "PDF • Ontem", score: 15, avatar: avatarMarcos, initials: "MJ", color: "bg-rose-500" },
 ];
 
 const getScoreColor = (score: number) => {
@@ -50,7 +54,7 @@ const HowItWorks = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Left column - Steps 1 & 2 */}
           <motion.div
             className="flex flex-col gap-8"
@@ -73,7 +77,6 @@ const HowItWorks = () => {
               <p className="text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-4">
                 Cole sua descrição de vaga.
               </p>
-              {/* Sample box */}
               <div className="mt-auto rounded-lg border border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-3 text-xs text-muted-foreground group-hover:text-background/50 transition-all duration-500 space-y-1.5">
                 <p className="font-semibold text-foreground/70 group-hover:text-background/80 transition-colors duration-500">Analista de Dados Sênior</p>
                 <p className="leading-relaxed">Experiência com Python, SQL e ferramentas de BI. Inglês avançado...</p>
@@ -94,7 +97,6 @@ const HowItWorks = () => {
               <p className="text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-4">
                 Arraste pastas inteiras. O sistema processa o texto dos currículos automaticamente.
               </p>
-              {/* Sample box */}
               <div className="mt-auto rounded-lg border border-dashed border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-4 transition-all duration-500 flex flex-col items-center gap-2">
                 <Upload className="w-5 h-5 text-muted-foreground group-hover:text-background/50 transition-colors duration-500" />
                 <p className="text-[11px] text-muted-foreground group-hover:text-background/50 transition-colors duration-500 text-center">
@@ -105,7 +107,7 @@ const HowItWorks = () => {
             </motion.div>
           </motion.div>
 
-          {/* Center column - Step 3: Análise Semântica (Featured - always dark) */}
+          {/* Center column - Step 3: Critérios (Featured - always dark) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,11 +130,11 @@ const HowItWorks = () => {
               <h3 className="text-2xl font-bold mb-4 leading-tight">
                 Insira Critérios de<br />Classificação
               </h3>
-              <p className="text-background/70 mb-8">
+              <p className="text-background/70 mb-6">
                 Nossa IA entende contexto, não apenas palavras-chave.
               </p>
 
-              <div className="space-y-3 mt-auto">
+              <div className="space-y-2.5 mt-auto">
                 <div className="flex items-center gap-3 text-sm border border-background/20 rounded-lg p-3">
                   <X className="w-4 h-4 text-destructive flex-shrink-0" />
                   <span>Eliminado: Sem CNH</span>
@@ -144,6 +146,14 @@ const HowItWorks = () => {
                 <div className="flex items-center gap-3 text-sm border border-background/20 rounded-lg p-3">
                   <AlertCircle className="w-4 h-4 text-accent flex-shrink-0" />
                   <span>Atenção: Exp. &lt; 2 anos</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm border border-background/20 rounded-lg p-3">
+                  <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
+                  <span>Localização: São Paulo, SP</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm border border-background/20 rounded-lg p-3">
+                  <GraduationCap className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Formação: Eng. ou Ciência da Computação</span>
                 </div>
               </div>
             </div>
@@ -170,18 +180,25 @@ const HowItWorks = () => {
               Obtenha seu Match Score com nosso Filtro por IA já organizados.
             </p>
 
-            {/* Mini ranking table */}
             <div className="space-y-2 mt-auto">
               {candidates.map((c, i) => (
                 <div
                   key={i}
                   className="flex items-center gap-3 rounded-lg bg-secondary/60 group-hover:bg-background/10 px-3 py-2 transition-colors duration-500"
                 >
-                  <div
-                    className={`w-8 h-8 rounded-full ${c.color} flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0`}
-                  >
-                    {c.initials}
-                  </div>
+                  {c.avatar ? (
+                    <img
+                      src={c.avatar}
+                      alt={c.name}
+                      className="w-8 h-8 rounded-full object-cover flex-shrink-0"
+                    />
+                  ) : (
+                    <div
+                      className={`w-8 h-8 rounded-full ${c.color} flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0`}
+                    >
+                      {c.initials}
+                    </div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold truncate">{c.name}</p>
                     <p className="text-[10px] text-muted-foreground group-hover:text-background/50 transition-colors duration-500">{c.time}</p>
