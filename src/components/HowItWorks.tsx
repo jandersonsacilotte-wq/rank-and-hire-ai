@@ -84,11 +84,11 @@ const HowItWorks = () => {
                 </div>
                 <StepBadge label="Passo 01" />
               </div>
-              <h3 className="text-xl font-bold mb-1.5">Job Description</h3>
-              <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-3">
+              <h3 className="text-xl font-bold mb-1">Job Description</h3>
+              <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-2">
                 Cole sua descrição de vaga.
               </p>
-              <div className="mt-auto rounded-lg border border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-3 text-xs text-muted-foreground group-hover:text-background/50 transition-all duration-500 space-y-1">
+              <div className="rounded-lg border border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-3 text-xs text-muted-foreground group-hover:text-background/50 transition-all duration-500 space-y-1">
                 <p className="font-semibold text-foreground/70 group-hover:text-background/80 transition-colors duration-500">Analista de Dados Sênior</p>
                 <p className="leading-relaxed">Experiência com Python, SQL e ferramentas de BI. Inglês avançado...</p>
               </div>
@@ -102,11 +102,11 @@ const HowItWorks = () => {
                 </div>
                 <StepBadge label="Passo 02" />
               </div>
-              <h3 className="text-xl font-bold mb-1.5">Upload em Massa</h3>
-              <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-3">
+              <h3 className="text-xl font-bold mb-1">Upload em Massa</h3>
+              <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-2">
                 Arraste pastas inteiras. O sistema processa os currículos automaticamente.
               </p>
-              <div className="mt-auto rounded-lg border border-dashed border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-3 transition-all duration-500 flex flex-col items-center gap-1.5">
+              <div className="rounded-lg border border-dashed border-border group-hover:border-background/20 bg-secondary/50 group-hover:bg-background/5 p-3 transition-all duration-500 flex flex-col items-center gap-1.5">
                 <Upload className="w-5 h-5 text-muted-foreground group-hover:text-background/50 transition-colors duration-500" />
                 <p className="text-[11px] text-muted-foreground group-hover:text-background/50 transition-colors duration-500 text-center">
                   curriculos_vaga_042.zip<br />
@@ -134,14 +134,15 @@ const HowItWorks = () => {
                 <StepBadge label="Passo 03" dark />
               </div>
 
-              <h3 className="text-xl font-bold mb-2 leading-tight">
+              <h3 className="text-xl font-bold mb-1 leading-tight">
                 Insira Critérios de Classificação
               </h3>
-              <p className="text-background/70 text-sm mb-5">
+              <p className="text-background/70 text-sm mb-4">
                 Nossa IA entende contexto, não apenas palavras-chave.
               </p>
 
-              <div className="space-y-2 mt-auto">
+              <p className="text-xs font-bold uppercase tracking-widest text-background/40 mb-2">Meus Critérios</p>
+              <div className="space-y-2">
                 <div className="flex items-center gap-3 text-sm border border-background/20 rounded-lg p-2.5">
                   <X className="w-4 h-4 text-destructive flex-shrink-0" />
                   <span>Eliminado: Sem CNH</span>
@@ -180,12 +181,15 @@ const HowItWorks = () => {
               </div>
               <StepBadge label="Resultado" />
             </div>
-            <h3 className="text-xl font-bold mb-1.5">Ranking</h3>
-            <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-4">
+            <h3 className="text-xl font-bold mb-1">Ranking</h3>
+            <p className="text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-500 mb-3">
               Obtenha seu Match Score com nosso Filtro por IA já organizados.
             </p>
 
-            <div className="space-y-2 mt-auto">
+            <p className="text-xs font-semibold text-foreground/50 group-hover:text-background/40 transition-colors duration-500 mb-2">
+              Vaga: Coordenador de Marketing
+            </p>
+            <div className="space-y-2">
               {candidates.map((c, i) => (
                 <div
                   key={i}
