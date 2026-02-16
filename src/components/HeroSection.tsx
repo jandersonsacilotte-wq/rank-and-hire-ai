@@ -15,14 +15,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-3xl text-center"
-        >
+          className="mx-auto max-w-3xl text-center">
+
           <span className="mb-6 inline-block rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-muted-foreground">
             Inteligência Artificial para RH
           </span>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Menos análise manual.{" "}
-            <span className="text-gradient">Mais decisão estratégica.</span>
+            <span className="text-gradient">Recrutamento Instântaneo</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Uma inteligência que transforma volume de currículos em ranking
@@ -44,20 +44,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 48 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mx-auto mt-16 max-w-5xl"
-        >
+          className="mx-auto mt-16 max-w-5xl">
+
           <div className="rounded-xl border border-border bg-card p-2 shadow-elevated">
             <img
               src={dashboardMockup}
               alt="Dashboard FiltrAI mostrando ranking estratégico de candidatos"
               className="w-full rounded-lg"
-              loading="lazy"
-            />
+              loading="lazy" />
+
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
