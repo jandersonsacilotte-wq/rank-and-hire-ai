@@ -24,7 +24,7 @@ const HeroSection = () => {
             Menos análise manual.{" "}
             <span className="text-gradient">Recrutamento Instântaneo</span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">Com o FiltrAI você substitue horas de leitura de CV´s por um ranking gerado por IA em minutos. Diminua seu SLA com nosso apoio.
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">Encontre talentos raros: com o FiltrAI você substitue a leitura manual de centenas de CV´s por um ranking gerado em minutos por nossa IA. Faça crescer seu banco de talentos com nosso apoio.
 
 
           </p>
