@@ -126,37 +126,37 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.35 }}
               className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-card text-center"
             >
-              {/* Avatar */}
+              {/* Company logo */}
               <img
-                src={t.avatar}
-                alt={t.name}
-                className="mx-auto mb-4 h-20 w-20 rounded-full object-cover ring-4 ring-primary/10"
+                src={t.logo}
+                alt={`Logo ${t.company}`}
+                className="mx-auto mb-8 h-14 w-auto object-contain"
               />
-
-              {/* Name & role */}
-              <h3 className="text-lg font-bold text-foreground">{t.name}</h3>
-              <p className="text-sm text-muted-foreground mb-1">
-                {t.role} · {t.company}
-              </p>
-
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
-                {Array.from({ length: t.rating }).map((_, s) => (
-                  <Star key={s} className="h-4 w-4 fill-primary text-primary" />
-                ))}
-              </div>
 
               {/* Quote */}
               <p className="text-base leading-relaxed text-muted-foreground mb-8">
                 "{t.text}"
               </p>
 
-              {/* Company logo */}
-              <img
-                src={t.logo}
-                alt={`Logo ${t.company}`}
-                className="mx-auto h-8 w-auto object-contain opacity-60"
-              />
+              {/* Avatar & info */}
+              <div className="flex flex-col items-center gap-3">
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="h-16 w-16 rounded-full object-cover ring-4 ring-primary/10"
+                />
+                <div className="text-center">
+                  <h3 className="text-lg font-bold text-foreground">{t.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {t.role} · {t.company}
+                  </p>
+                </div>
+                <div className="flex gap-1">
+                  {Array.from({ length: t.rating }).map((_, s) => (
+                    <Star key={s} className="h-4 w-4 fill-primary text-primary" />
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </AnimatePresence>
 
