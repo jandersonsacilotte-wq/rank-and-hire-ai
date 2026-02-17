@@ -69,9 +69,6 @@ const ProblemSection = () => {
           </div>
 
           <p className="leading-relaxed text-muted-foreground text-base">Recrutadores relatam gastar mais de 50% do tempo apenas lendo, comparando e organizando candidatos manualmente. Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
-
-            <br />
-            Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
           </p>
 
           <div className="space-y-2">
