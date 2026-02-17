@@ -120,4 +120,40 @@
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  .bg-section-1 {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .bg-section-2 {
+    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(220 14% 94%) 50%, hsl(var(--primary) / 0.06) 100%);
+  }
+
+  .bg-section-3 {
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.06) 0%, hsl(var(--background)) 50%, hsl(var(--accent) / 0.05) 100%);
+  }
+
+  .bg-section-4 {
+    background: linear-gradient(180deg, hsl(var(--accent) / 0.05) 0%, hsl(var(--secondary)) 50%, hsl(220 14% 94%) 100%);
+  }
+
+  .bg-section-5 {
+    background: linear-gradient(180deg, hsl(220 14% 94%) 0%, hsl(var(--background)) 50%, hsl(var(--primary) / 0.04) 100%);
+  }
+
+  .bg-section-6 {
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.04) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent) / 0.06) 100%);
+  }
+
+  .bg-section-7 {
+    background: linear-gradient(180deg, hsl(var(--accent) / 0.06) 0%, hsl(var(--background)) 50%, hsl(var(--secondary)) 100%);
+  }
+
+  .bg-section-8 {
+    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--primary) / 0.05) 50%, hsl(var(--primary) / 0.08) 100%);
+  }
+
+  .bg-section-9 {
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.08) 0%, hsl(var(--background)) 100%);
+  }
 }
