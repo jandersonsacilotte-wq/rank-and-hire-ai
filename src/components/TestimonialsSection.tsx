@@ -130,7 +130,7 @@ const TestimonialsSection = () => {
               <img
                 src={t.logo}
                 alt={`Logo ${t.company}`}
-                className="mx-auto mb-8 h-14 w-auto object-contain"
+                className="mx-auto mb-8 h-[4.5rem] w-auto object-contain"
               />
 
               {/* Quote */}
