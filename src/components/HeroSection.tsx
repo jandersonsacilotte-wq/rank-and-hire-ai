@@ -21,8 +21,7 @@ const HeroSection = () => {
 
           </span>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Menos análise manual.{" "}
-            <span className="text-gradient">Recrutamento Instântaneo</span>
+            <span className="text-gradient">Simplifique Sua Decisão</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Uma inteligência que transforma volume de currículos em ranking
