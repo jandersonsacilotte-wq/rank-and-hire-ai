@@ -32,7 +32,7 @@ const ProblemSection = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mx-auto max-w-3xl rounded-xl border-l-4 border-primary/30 bg-card p-6 mb-10 shadow-sm">
 
-          <p className="leading-relaxed text-muted-foreground text-base">
+          <p className="text-sm leading-relaxed text-muted-foreground">
             Quando o volume cresce, o processo deixa de ser estratégico e vira operacional. Excesso de currículos, pressão por SLA e múltiplas vagas abertas ao mesmo tempo transformaram a triagem em um gargalo invisível dentro do RH.
           </p>
         </motion.div>
@@ -62,23 +62,23 @@ const ProblemSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mx-auto max-w-3xl text-center space-y-6">
 
-          <div className="flex items-center gap-[16px] shadow-md">
+          <div className="flex items-center gap-4 shadow-none">
             <div className="h-px flex-1 bg-border" />
-            <span className="font-bold font-serif text-3xl text-primary">E não é exagero.</span>
+            <span className="text-sm font-medium text-muted-foreground">E não é exagero.</span>
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          <p className="leading-relaxed text-muted-foreground text-lg font-normal">Recrutadores relatam gastar mais de 50% do tempo apenas lendo, comparando e organizando candidatos manualmente. Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
-
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Recrutadores relatam gastar mais de 50% do tempo apenas lendo, comparando e organizando candidatos manualmente.
             <br />
             Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
           </p>
 
           <div className="space-y-2">
-            <p className="font-semibold text-foreground text-2xl">
+            <p className="text-sm font-semibold text-foreground">
               O <span className="text-primary">FiltrAI</span> resolve exatamente isso.
             </p>
-            <p className="leading-relaxed text-muted-foreground text-lg">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               Ele analisa candidatos por aderência real à vaga e entrega um ranking estruturado em minutos — para que você comece pelo que realmente importa.
             </p>
           </div>
