@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { AlertTriangle, Clock, Users, FileStack } from "lucide-react";
 
 const problems = [
-{ icon: FileStack, text: "Analisar centenas de currículos por vaga." },
-{ icon: Clock, text: "Perder horas com triagem manual e repetitiva." },
-{ icon: AlertTriangle, text: "Fechar vagas com SLA curto." },
-{ icon: Users, text: "Tocar várias vagas simultâneas." }];
+{ icon: FileStack, text: "Centenas de currículos por vaga, sem tempo de analisar todos." },
+{ icon: Clock, text: "Horas gastas em triagem manual repetitiva." },
+{ icon: AlertTriangle, text: "Risco de perder o candidato ideal no meio do volume." },
+{ icon: Users, text: "Retrabalho e custo por contratações erradas." }];
 
 
 const ProblemSection = () => {
@@ -22,8 +22,8 @@ const ProblemSection = () => {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Seu RH está decidindo no meio do caos.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">Excesso de currículos, sobrecarga da equipe e decisões feitas sob pressão geram contratações erradas e desperdício de talento. 
-Se você precisa:
+          <p className="mt-4 text-lg text-muted-foreground">Excesso de currículos, sobrecarga da equipe e decisões feitas sob pressão geram contratações erradas e desperdício de talento. Se você precisa:
+
 
           </p>
         </motion.div>
