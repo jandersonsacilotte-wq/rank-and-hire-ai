@@ -17,8 +17,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center">
 
-          <span className="mb-6 inline-block rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-muted-foreground">
-            Inteligência Artificial para RH
+          <span className="mb-6 inline-block rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-muted-foreground">🟢 Inteligência Artificial para Recrutadores
+
           </span>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Menos análise manual.{" "}
