@@ -10,7 +10,7 @@ const points = [
 
 const DifferentialSection = () => {
   return (
-    <section id="diferencial" className="py-24 bg-section-6">
+    <section id="diferencial" className="py-12 md:py-24 bg-section-6">
       <div className="container mx-auto px-6">
         <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-10 shadow-elevated md:p-16">
           <motion.div
