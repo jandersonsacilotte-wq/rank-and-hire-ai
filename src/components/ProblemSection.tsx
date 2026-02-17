@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { AlertTriangle, Clock, Users, FileStack } from "lucide-react";
 
 const problems = [
-{ icon: FileStack, text: "Centenas de currículos por vaga, sem tempo de analisar todos." },
+{ icon: FileStack, text: "Analisar centenas de currículos por vaga." },
 { icon: Clock, text: "Horas gastas em triagem manual repetitiva." },
 { icon: AlertTriangle, text: "Risco de perder o candidato ideal no meio do volume." },
 { icon: Users, text: "Retrabalho e custo por contratações erradas." }];
