@@ -2,15 +2,6 @@ import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoFiltrAI from "@/assets/logo-filtrai.png";
 
-const productLinks = [
-  "Como Funciona",
-  "Ranking por Aderência",
-  "Critérios Personalizáveis",
-  "Análise Comparativa",
-  "Shortlist Automática",
-  "Dashboard de Vagas",
-];
-
 const featureLinks = [
   "CV Estruturado",
   "Importação em Lote",
@@ -69,7 +60,9 @@ const Footer = () => {
           {/* Card marca + MOT */}
           <div className="lg:col-span-3">
             <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-4">
-              <img src={logoFiltrAI} alt="FiltrAI" className="h-9 w-auto" />
+              <div className="bg-white rounded-xl p-3 inline-block">
+                <img src={logoFiltrAI} alt="FiltrAI" className="h-16 w-auto" />
+              </div>
               <p className="text-xs font-semibold text-white/80 italic">
                 "Motor de Organização de Talentos. Transformando volume de currículos em ranking estruturado por aderência real à vaga."
               </p>
@@ -100,8 +93,7 @@ const Footer = () => {
           </div>
 
           {/* Colunas de links */}
-          <div className="lg:col-span-9 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
-            <FooterLinkGroup title="Produto" links={productLinks} />
+          <div className="lg:col-span-9 grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <FooterLinkGroup title="Funcionalidades" links={featureLinks} />
             <FooterLinkGroup title="Soluções" links={solutionLinks} />
             <FooterLinkGroup title="Recursos" links={resourceLinks} />
