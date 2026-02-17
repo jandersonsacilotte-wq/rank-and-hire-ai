@@ -30,7 +30,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" className="bg-gradient-hero text-primary-foreground px-8 py-6 text-base font-semibold shadow-glow hover:opacity-90 transition-opacity">
-              Solicitar Demonstração
+              Testar Gratuitamente
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-6 text-base font-medium">
