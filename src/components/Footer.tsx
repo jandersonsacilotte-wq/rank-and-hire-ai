@@ -59,14 +59,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           {/* Card marca + MOT */}
           <div className="lg:col-span-3">
-            <div className="rounded-2xl bg-card border border-white/10 p-6 space-y-4">
+            <div className="space-y-2">
               <div className="inline-block">
                 <img src={logoFiltrAI} alt="FiltrAI" className="h-24 w-auto" />
               </div>
-              <p className="text-xs font-semibold text-foreground/80 italic">
+              <p className="text-xs font-semibold text-white/80 italic">
                 "Motor de Organização de Talentos. Transformando volume de currículos em ranking estruturado por aderência real à vaga."
               </p>
-              <p className="text-xs leading-relaxed text-muted-foreground">
+              <p className="text-xs leading-relaxed text-white/50">
                 Tecnologia desenvolvida para apoiar decisões de recrutamento com método, clareza e prioridade definida.
               </p>
             </div>
