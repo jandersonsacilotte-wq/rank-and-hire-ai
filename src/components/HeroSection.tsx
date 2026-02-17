@@ -5,7 +5,7 @@ import dashboardMockup from "@/assets/dashboard-mockup.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
+    <section className="relative overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20 lg:pt-40 lg:pb-32">
       {/* Subtle grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border))_1px,transparent_1px),linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--accent)/0.08),transparent_70%)]" />

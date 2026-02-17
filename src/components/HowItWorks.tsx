@@ -50,7 +50,7 @@ const HowItWorks = () => {
     "group rounded-2xl border border-border bg-card text-card-foreground shadow-card p-7 transition-all duration-500 hover:bg-foreground hover:text-background hover:border-foreground hover:shadow-elevated cursor-default";
 
   return (
-    <section id="como-funciona" className="py-24 bg-section-3">
+    <section id="como-funciona" className="py-12 md:py-24 bg-section-3">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
