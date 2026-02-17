@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <div className="rounded-2xl bg-white/[0.08] border border-white/10 p-6 space-y-4">
               <div className="inline-block">
-                <img src={logoFiltrAI} alt="FiltrAI" className="h-20 w-auto brightness-0 invert opacity-90" />
+                <img src={logoFiltrAI} alt="FiltrAI" className="h-20 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]" />
               </div>
               <p className="text-xs font-semibold text-white/80 italic">
                 "Motor de Organização de Talentos. Transformando volume de currículos em ranking estruturado por aderência real à vaga."
