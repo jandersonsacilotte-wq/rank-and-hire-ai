@@ -6,7 +6,7 @@ const problems = [
 { icon: FileStack, text: "Você analisa centenas de currículos por vaga" },
 { icon: Clock, text: "Perde horas com triagem manual e repetitiva" },
 { icon: AlertTriangle, text: "Fecha vagas com SLA curto" },
-{ icon: Users, text: "Toca várias vagas simultâneas" }];
+{ icon: Users, text: "Toca várias posições simultâneas" }];
 
 
 const ProblemSection = () => {
