@@ -3,7 +3,7 @@ import { AlertTriangle, Clock, Users, FileStack } from "lucide-react";
 
 const problems = [
 { icon: FileStack, text: "Analisar centenas de currículos por vaga." },
-{ icon: Clock, text: "Horas gastas em triagem manual repetitiva." },
+{ icon: Clock, text: "Perder horas com triagem manual e repetitiva." },
 { icon: AlertTriangle, text: "Fechar vagas com SLA curto." },
 { icon: Users, text: "Retrabalho e custo por contratações erradas." }];
 
