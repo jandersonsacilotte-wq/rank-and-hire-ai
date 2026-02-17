@@ -5,41 +5,58 @@ import { Button } from "@/components/ui/button";
 const plans = [
   {
     name: "FREE",
+    subtitle: "PARA COMEÇAR",
     price: "0",
     cents: "",
     period: "/mês",
-    features: ["3 vagas/mês", "100 análises IA", "1 critério eliminatório"],
+    features: [
+      "3 vagas/mês",
+      "100 análises IA",
+      "1 critério eliminatório",
+      "Ranking básico",
+    ],
     cta: "Criar Conta Grátis",
     highlighted: false,
+    emoji: "⚡",
   },
   {
-    name: "ESSENCIAL",
-    price: "69",
+    name: "PRO",
+    subtitle: "PARA RECRUTADORES ATIVOS",
+    price: "97",
     cents: ",90",
     period: "/mês",
-    badge: "RECOMENDADO",
+    badge: "🔥 RECOMENDADO",
     features: [
-      "10 vagas /mês",
-      "500 análises IA",
-      "5 critérios eliminatórios",
-      "CRM: Importação de Talentos",
+      "Vagas ilimitadas",
+      "Até 500 análises IA/mês",
+      "Até 10 critérios eliminatórios",
+      "Ranking detalhado com justificativa",
+      "Histórico completo",
+      "Exportação profissional (PDF/CSV)",
     ],
     cta: "Começar Agora",
     highlighted: true,
+    emoji: "🔵",
   },
   {
-    name: "AVANÇADO",
-    price: "199",
+    name: "BUSINESS",
+    subtitle: "PARA EQUIPES & CONSULTORIAS",
+    price: "297",
     cents: ",90",
     period: "/mês",
+    badgeAlt: "Para Equipes",
     features: [
-      "50 vagas /mês",
-      "2.000 análises IA",
-      "15 critérios eliminatórios",
-      "Histórico Vitalício",
+      "Multiusuário (até 5 usuários)",
+      "Vagas ilimitadas",
+      "Até 2.000 análises IA/mês",
+      "Até 15 critérios eliminatórios",
+      "Compartilhamento de ranking",
+      "Relatório executivo personalizado",
+      "Prioridade de processamento",
     ],
     cta: "Criar Conta",
     highlighted: false,
+    emoji: "🟣",
   },
 ];
 
@@ -85,13 +102,26 @@ const PricingSection = () => {
                 </>
               )}
 
+              {plan.badgeAlt && !plan.highlighted && (
+                <span className="absolute -top-3.5 right-6 text-xs font-semibold border border-border bg-accent text-accent-foreground px-3 py-1 rounded-md">
+                  {plan.badgeAlt}
+                </span>
+              )}
+
               <h3
-                className={`text-sm font-bold tracking-widest mb-6 ${
+                className={`text-sm font-bold tracking-widest mb-1 ${
                   plan.highlighted ? "text-primary-foreground" : "text-primary"
                 }`}
               >
-                {plan.name}
+                {plan.emoji} {plan.name}
               </h3>
+              <p
+                className={`text-xs tracking-wide mb-6 ${
+                  plan.highlighted ? "opacity-60" : "text-muted-foreground"
+                }`}
+              >
+                {plan.subtitle}
+              </p>
 
               <div className="flex items-baseline mb-8">
                 {plan.price === "0" && (
