@@ -64,21 +64,21 @@ const ProblemSection = () => {
 
           <div className="flex items-center gap-4 shadow-none">
             <div className="h-px flex-1 bg-border" />
-            <span className="text-sm font-medium text-gradient">E não é exagero.</span>
+            <span className="font-medium text-gradient text-xl">E não é exagero.</span>
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            Recrutadores relatam gastar mais de 50% do tempo apenas lendo, comparando e organizando candidatos manualmente.
+          <p className="leading-relaxed text-muted-foreground text-base">Recrutadores relatam gastar mais de 50% do tempo apenas lendo, comparando e organizando candidatos manualmente. Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
+
             <br />
             Tempo que deveria estar sendo usado para entrevistar, negociar e fechar posições.
           </p>
 
           <div className="space-y-2">
-            <p className="text-sm font-semibold text-foreground">
+            <p className="font-semibold text-foreground text-lg">
               O <span className="text-primary">FiltrAI</span> resolve exatamente isso.
             </p>
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <p className="leading-relaxed text-muted-foreground text-base">
               Ele analisa candidatos por aderência real à vaga e entrega um ranking estruturado em minutos — para que você comece pelo que realmente importa.
             </p>
           </div>
