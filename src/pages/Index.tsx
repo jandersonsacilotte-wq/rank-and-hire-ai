@@ -5,6 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import HowItWorks from "@/components/HowItWorks";
 
 import BenefitsSection from "@/components/BenefitsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import DifferentialSection from "@/components/DifferentialSection";
 import PricingSection from "@/components/PricingSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -21,6 +22,7 @@ const Index = () => {
         <HowItWorks />
         
         <BenefitsSection />
+        <TestimonialsSection />
         <DifferentialSection />
         <PricingSection />
         <FinalCTA />
