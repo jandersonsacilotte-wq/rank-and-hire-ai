@@ -21,8 +21,8 @@ const HeroSection = () => {
 
           </span>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Menos análise manual.{" "}
-            <span className="text-gradient">Recrutamento Instântaneo</span>
+            Simplifique Seu Recrutamento.{" "}
+            <span className="text-gradient">Decida quem entrevistar em minutos.</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">O FiltrAI é uma ferramenta poderosa que substitue horas com leitura manual de centenas de CVs por um ranking instântaneo gerado por IA. 
 
