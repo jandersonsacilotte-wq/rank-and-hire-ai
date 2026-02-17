@@ -45,7 +45,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="planos" className="py-24 bg-background">
+    <section id="planos" className="py-24 bg-section-7">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
