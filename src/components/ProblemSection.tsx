@@ -64,7 +64,7 @@ const ProblemSection = () => {
 
           <div className="flex items-center gap-4 shadow-none">
             <div className="h-px flex-1 bg-border" />
-            <span className="text-sm font-medium text-muted-foreground">E não é exagero.</span>
+            <span className="text-sm font-medium text-gradient">E não é exagero.</span>
             <div className="h-px flex-1 bg-border" />
           </div>
 
