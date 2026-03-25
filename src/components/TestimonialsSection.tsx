@@ -185,8 +185,6 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
             >
               Testar Grátis por 7 Dias
             </a>
