@@ -115,12 +115,6 @@ const categories = [
           </div>
         ),
       },
-      {
-        title: "Análise em Segundo Plano",
-        description: "Envie os arquivos, feche a aba e volte quando quiser — o ranking estará completo e pronto.",
-        icon: Clock,
-        badge: { label: "GRÁTIS", color: "green" as const },
-      },
     ],
   },
   {
@@ -134,24 +128,6 @@ const categories = [
     impactHeadline: "Do upload à shortlist em minutos.",
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
-      {
-        title: "Upload em Massa",
-        description: "Arraste pastas inteiras ou ZIPs com dezenas de CVs. O sistema extrai e processa cada candidato automaticamente.",
-        icon: Upload,
-        badge: { label: "GRÁTIS", color: "green" as const },
-        visual: (
-          <div className="mt-4 rounded-lg border border-dashed border-sky-500/30 bg-sky-500/5 p-3 flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-sky-500/20 flex items-center justify-center">
-              <Upload className="h-4 w-4 text-sky-400" />
-            </div>
-            <div className="flex-1">
-              <div className="h-2 w-28 bg-sky-500/20 rounded-full" />
-              <div className="h-1.5 w-16 bg-sky-500/10 rounded-full mt-1.5" />
-            </div>
-            <span className="text-[10px] text-sky-400 font-medium">+42 CVs</span>
-          </div>
-        ),
-      },
       {
         title: "Ranking Automático",
         description: "Candidatos organizados do mais ao menos aderente. Comece pelos que importam, sem ler um currículo.",
@@ -249,12 +225,6 @@ const categories = [
         description: "Compare 2 ou 3 finalistas num único painel. Ideal para decidir entre perfis similares antes da entrevista.",
         icon: GitCompareArrows,
         badge: { label: "GRÁTIS", color: "green" as const },
-      },
-      {
-        title: "Histórico Vitalício",
-        description: "Acesse qualquer processo seletivo anterior a qualquer momento. Busca rápida por vagas ou candidatos.",
-        icon: History,
-        badge: { label: "PRO", color: "amber" as const },
       },
     ],
   },
@@ -415,14 +385,6 @@ const FeaturesSection = () => {
                   <p className="text-sm lg:text-base text-white/50 leading-relaxed">
                     {activeCategory.impactSub}
                   </p>
-                  <div className="mt-6 flex items-center gap-3">
-                    <span className={`text-4xl font-black ${activeCategory.accentText}`}>
-                      {activeCategory.features.length}
-                    </span>
-                    <span className="text-sm text-white/40 leading-tight">
-                      recursos<br />nesta categoria
-                    </span>
-                  </div>
                 </motion.div>
               </div>
 
@@ -452,8 +414,8 @@ const FeaturesSection = () => {
 
                         <div className="relative z-10">
                           <div className="flex items-start justify-between mb-3">
-                            <div className={`p-2 rounded-lg ${activeCategory.accentBg}`}>
-                              <feature.icon className={`h-4 w-4 ${activeCategory.accentText}`} />
+                            <div className={`p-2 rounded-lg ${isFeatured ? 'bg-white/10' : activeCategory.accentBg}`}>
+                              <feature.icon className={`h-4 w-4 ${isFeatured ? 'text-white' : activeCategory.accentText}`} />
                             </div>
                             <Badge label={feature.badge.label} color={feature.badge.color} />
                           </div>
