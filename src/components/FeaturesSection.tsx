@@ -77,25 +77,6 @@ const categories = [
         ),
       },
       {
-        title: "Veredito Executivo da IA",
-        description:
-          "A IA gera uma síntese estratégica: perfil ideal, candidatos recomendados e pontos de atenção — em linguagem executiva.",
-        icon: Sparkles,
-        badge: { label: "PRO", color: "amber" as const },
-        featured: true,
-        visual: (
-          <div className="mt-4 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3">
-            <p className="text-[11px] text-violet-300/80 italic leading-relaxed">
-              "Selecionei o candidato mais aderente entre 87 currículos. Recomendo priorizar os 3 primeiros com score acima de 85."
-            </p>
-            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-violet-400/50">
-              <Clock className="h-3 w-3" />
-              Gerado em 3 min
-            </div>
-          </div>
-        ),
-      },
-      {
         title: "Critérios Eliminatórios",
         description: "Defina filtros obrigatórios por vaga. A IA classifica automaticamente: aprovado, atenção ou eliminado.",
         icon: ShieldCheck,
@@ -112,6 +93,25 @@ const categories = [
                 {t.label}
               </span>
             ))}
+          </div>
+        ),
+      },
+      {
+        title: "Veredito Executivo da IA",
+        description:
+          "A IA gera uma síntese estratégica: perfil ideal, candidatos recomendados e pontos de atenção — em linguagem executiva.",
+        icon: Sparkles,
+        badge: { label: "PRO", color: "amber" as const },
+        featured: true,
+        visual: (
+          <div className="mt-4 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3">
+            <p className="text-[11px] text-violet-300/80 italic leading-relaxed">
+              "Selecionei o candidato mais aderente entre 87 currículos. Recomendo priorizar os 3 primeiros com score acima de 85."
+            </p>
+            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-violet-400/50">
+              <Clock className="h-3 w-3" />
+              Gerado em 3 min
+            </div>
           </div>
         ),
       },
