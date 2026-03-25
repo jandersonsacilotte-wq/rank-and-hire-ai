@@ -13,22 +13,6 @@ const DifferentialSection = () => {
     <section id="diferencial" className="py-12 md:py-24 bg-section-6">
       <div className="container mx-auto px-6">
         <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-10 shadow-elevated md:p-16">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
-              Ferramentas genéricas não entendem recrutamento
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Por que o FiltrAI e não{" "}
-              <span className="text-gradient">outra solução?</span>
-            </h2>
-          </motion.div>
-
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {points.map((p, i) => (
               <motion.div
@@ -48,15 +32,22 @@ const DifferentialSection = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="mt-10 text-center"
+            transition={{ duration: 0.5 }}
+            className="text-center mt-12"
           >
+            <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+              Ferramentas genéricas não entendem recrutamento
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Por que o FiltrAI e não{" "}
+              <span className="text-gradient">outra solução?</span>
+            </h2>
             <a
               href="#planos"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
             >
               Ver Comparativo
             </a>
