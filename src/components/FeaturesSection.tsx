@@ -239,6 +239,7 @@ const categories = [
     accentText: "text-amber-400",
     accentBg: "bg-amber-500/15",
     accentBorder: "border-amber-500/30",
+    tabBg: "bg-amber-600",
     impactHeadline: "Dados que vendem seu trabalho.",
     impactSub: "Relatórios por candidato e rankings compartilháveis que impressionam gestores e clientes.",
     features: [
