@@ -14,9 +14,10 @@ import {
   History,
   Clock,
   Layers,
-  Zap,
   Users,
   Eye,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 /* ── Badge ── */
@@ -40,6 +41,13 @@ const categories = [
     id: "ia",
     label: "Inteligência Artificial",
     icon: Brain,
+    // Theme for this tab
+    bg: "bg-gradient-to-br from-violet-950 via-[hsl(260,40%,12%)] to-[hsl(240,30%,8%)]",
+    accentText: "text-violet-400",
+    accentBg: "bg-violet-500/15",
+    accentBorder: "border-violet-500/30",
+    impactHeadline: "IA que lê, interpreta e classifica.",
+    impactSub: "Seus 87 currículos analisados em 3 minutos — não em 3 dias.",
     features: [
       {
         title: "Score de Aderência IA",
@@ -56,13 +64,13 @@ const categories = [
                     height: `${score * 0.6}px`,
                     background:
                       score > 80
-                        ? "hsl(var(--accent))"
+                        ? "hsl(270 60% 60%)"
                         : score > 60
-                        ? "hsl(var(--primary) / 0.5)"
-                        : "hsl(var(--muted-foreground) / 0.15)",
+                        ? "hsl(270 40% 40%)"
+                        : "hsl(270 20% 25%)",
                   }}
                 />
-                <span className="text-[10px] font-bold text-muted-foreground">{score}</span>
+                <span className="text-[10px] font-bold text-violet-300/60">{score}</span>
               </div>
             ))}
           </div>
@@ -76,11 +84,11 @@ const categories = [
         badge: { label: "PRO", color: "amber" as const },
         featured: true,
         visual: (
-          <div className="mt-4 rounded-lg bg-accent/10 border border-accent/20 p-3">
-            <p className="text-[11px] text-accent/80 italic leading-relaxed">
+          <div className="mt-4 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3">
+            <p className="text-[11px] text-violet-300/80 italic leading-relaxed">
               "Selecionei o candidato mais aderente entre 87 currículos. Recomendo priorizar os 3 primeiros com score acima de 85."
             </p>
-            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-muted-foreground">
+            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-violet-400/50">
               <Clock className="h-3 w-3" />
               Gerado em 3 min
             </div>
@@ -119,6 +127,12 @@ const categories = [
     id: "gestao",
     label: "Gestão de Vagas",
     icon: Layers,
+    bg: "bg-gradient-to-br from-sky-950 via-[hsl(210,40%,12%)] to-[hsl(220,30%,8%)]",
+    accentText: "text-sky-400",
+    accentBg: "bg-sky-500/15",
+    accentBorder: "border-sky-500/30",
+    impactHeadline: "Do upload à shortlist em minutos.",
+    impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
       {
         title: "Upload em Massa",
@@ -126,15 +140,15 @@ const categories = [
         icon: Upload,
         badge: { label: "GRÁTIS", color: "green" as const },
         visual: (
-          <div className="mt-4 rounded-lg border border-dashed border-primary/30 bg-primary/5 p-3 flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center">
-              <Upload className="h-4 w-4 text-primary" />
+          <div className="mt-4 rounded-lg border border-dashed border-sky-500/30 bg-sky-500/5 p-3 flex items-center gap-3">
+            <div className="h-8 w-8 rounded bg-sky-500/20 flex items-center justify-center">
+              <Upload className="h-4 w-4 text-sky-400" />
             </div>
             <div className="flex-1">
-              <div className="h-2 w-28 bg-primary/20 rounded-full" />
-              <div className="h-1.5 w-16 bg-primary/10 rounded-full mt-1.5" />
+              <div className="h-2 w-28 bg-sky-500/20 rounded-full" />
+              <div className="h-1.5 w-16 bg-sky-500/10 rounded-full mt-1.5" />
             </div>
-            <span className="text-[10px] text-primary font-medium">+42 CVs</span>
+            <span className="text-[10px] text-sky-400 font-medium">+42 CVs</span>
           </div>
         ),
       },
@@ -148,17 +162,17 @@ const categories = [
           <div className="mt-4 space-y-2">
             {[
               { name: "Ana L.", score: 96, color: "bg-emerald-500" },
-              { name: "Carlos M.", score: 88, color: "bg-accent" },
-              { name: "Julia S.", score: 74, color: "bg-primary/60" },
+              { name: "Carlos M.", score: 88, color: "bg-sky-500" },
+              { name: "Julia S.", score: 74, color: "bg-sky-500/60" },
             ].map((c, i) => (
               <div key={i} className="flex items-center gap-2">
-                <span className="text-[10px] font-bold text-muted-foreground w-4">#{i + 1}</span>
-                <div className="flex-1 h-5 bg-muted rounded-full overflow-hidden">
+                <span className="text-[10px] font-bold text-sky-300/50 w-4">#{i + 1}</span>
+                <div className="flex-1 h-5 bg-white/5 rounded-full overflow-hidden">
                   <div className={`h-full ${c.color} rounded-full flex items-center px-2`} style={{ width: `${c.score}%` }}>
                     <span className="text-[9px] font-bold text-white truncate">{c.name}</span>
                   </div>
                 </div>
-                <span className="text-[10px] font-bold text-foreground w-6 text-right">{c.score}</span>
+                <span className="text-[10px] font-bold text-sky-200 w-6 text-right">{c.score}</span>
               </div>
             ))}
           </div>
@@ -176,9 +190,9 @@ const categories = [
         icon: Globe,
         badge: { label: "PRO", color: "amber" as const },
         visual: (
-          <div className="mt-4 flex items-center gap-2 rounded-lg bg-primary/5 border border-primary/15 p-2.5">
-            <Globe className="h-4 w-4 text-primary flex-shrink-0" />
-            <span className="text-[10px] text-primary font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
+          <div className="mt-4 flex items-center gap-2 rounded-lg bg-sky-500/5 border border-sky-500/15 p-2.5">
+            <Globe className="h-4 w-4 text-sky-400 flex-shrink-0" />
+            <span className="text-[10px] text-sky-300 font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
           </div>
         ),
       },
@@ -188,6 +202,12 @@ const categories = [
     id: "colaboracao",
     label: "Colaboração & CRM",
     icon: Users,
+    bg: "bg-gradient-to-br from-emerald-950 via-[hsl(160,30%,10%)] to-[hsl(170,25%,7%)]",
+    accentText: "text-emerald-400",
+    accentBg: "bg-emerald-500/15",
+    accentBorder: "border-emerald-500/30",
+    impactHeadline: "Compartilhe decisões, não planilhas.",
+    impactSub: "Ranking compartilhável, banco de talentos e comparação lado a lado — tudo num clique.",
     features: [
       {
         title: "Banco de Talentos (CRM)",
@@ -199,12 +219,12 @@ const categories = [
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className="h-8 w-8 rounded-full bg-primary/10 border-2 border-card flex items-center justify-center -ml-2 first:ml-0"
+                className="h-8 w-8 rounded-full bg-emerald-500/10 border-2 border-emerald-500/20 flex items-center justify-center -ml-2 first:ml-0"
               >
-                <span className="text-[9px] font-bold text-primary">{String.fromCharCode(64 + i)}</span>
+                <span className="text-[9px] font-bold text-emerald-400">{String.fromCharCode(64 + i)}</span>
               </div>
             ))}
-            <span className="text-[10px] text-muted-foreground ml-1">+127 perfis</span>
+            <span className="text-[10px] text-emerald-400/60 ml-1">+127 perfis</span>
           </div>
         ),
       },
@@ -215,11 +235,11 @@ const categories = [
         badge: { label: "DESTAQUE", color: "purple" as const },
         featured: true,
         visual: (
-          <div className="mt-4 flex items-center gap-2 rounded-lg bg-accent/10 border border-accent/20 p-3">
-            <Share2 className="h-4 w-4 text-accent flex-shrink-0" />
+          <div className="mt-4 flex items-center gap-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 p-3">
+            <Share2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
             <div className="flex-1 min-w-0">
-              <div className="text-[10px] text-accent font-medium truncate">filtrai.com.br/ranking/abc123</div>
-              <div className="text-[9px] text-muted-foreground mt-0.5">Link seguro • Visualização apresentável</div>
+              <div className="text-[10px] text-emerald-300 font-medium truncate">filtrai.com.br/ranking/abc123</div>
+              <div className="text-[9px] text-emerald-400/50 mt-0.5">Link seguro • Visualização apresentável</div>
             </div>
           </div>
         ),
@@ -242,6 +262,12 @@ const categories = [
     id: "relatorios",
     label: "Relatórios",
     icon: Eye,
+    bg: "bg-gradient-to-br from-amber-950 via-[hsl(30,30%,10%)] to-[hsl(20,25%,7%)]",
+    accentText: "text-amber-400",
+    accentBg: "bg-amber-500/15",
+    accentBorder: "border-amber-500/30",
+    impactHeadline: "Dados que vendem seu trabalho.",
+    impactSub: "Relatórios por candidato e rankings compartilháveis que impressionam gestores e clientes.",
     features: [
       {
         title: "Relatório por Candidato",
@@ -258,14 +284,11 @@ const categories = [
             ].map((item) => (
               <div key={item.label}>
                 <div className="flex justify-between text-[10px] mb-1">
-                  <span className="text-muted-foreground">{item.label}</span>
-                  <span className="font-bold text-foreground">{item.pct}%</span>
+                  <span className="text-amber-300/60">{item.label}</span>
+                  <span className="font-bold text-amber-200">{item.pct}%</span>
                 </div>
-                <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-primary rounded-full"
-                    style={{ width: `${item.pct}%` }}
-                  />
+                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full bg-amber-500 rounded-full" style={{ width: `${item.pct}%` }} />
                 </div>
               </div>
             ))}
@@ -273,7 +296,7 @@ const categories = [
         ),
       },
       {
-        title: "Compartilhamento de Ranking",
+        title: "Resumo Compartilhável",
         description: "Mostre a qualidade do processo seletivo com um link compartilhável, seguro e apresentável.",
         icon: Share2,
         badge: { label: "DESTAQUE", color: "purple" as const },
@@ -284,9 +307,9 @@ const categories = [
               { value: "12", label: "Shortlist" },
               { value: "96", label: "Top Score" },
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg bg-primary/5 p-2">
-                <div className="text-lg font-bold text-primary">{stat.value}</div>
-                <div className="text-[9px] text-muted-foreground">{stat.label}</div>
+              <div key={stat.label} className="rounded-lg bg-amber-500/10 p-2">
+                <div className="text-lg font-bold text-amber-400">{stat.value}</div>
+                <div className="text-[9px] text-amber-300/50">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -296,10 +319,13 @@ const categories = [
   },
 ];
 
-/* ── Tab component ── */
+/* ── Main Component ── */
 const FeaturesSection = () => {
-  const [activeTab, setActiveTab] = useState("ia");
-  const activeCategory = categories.find((c) => c.id === activeTab)!;
+  const [activeIdx, setActiveIdx] = useState(0);
+  const activeCategory = categories[activeIdx];
+
+  const goPrev = () => setActiveIdx((prev) => (prev === 0 ? categories.length - 1 : prev - 1));
+  const goNext = () => setActiveIdx((prev) => (prev === categories.length - 1 ? 0 : prev + 1));
 
   return (
     <section id="funcionalidades" className="py-24 bg-section-3">
@@ -327,114 +353,172 @@ const FeaturesSection = () => {
         </motion.div>
 
         {/* Tabs */}
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {categories.map((cat) => {
-              const isActive = activeTab === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveTab(cat.id)}
-                  className={`
-                    group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
-                    ${isActive
-                      ? "bg-primary text-primary-foreground shadow-glow"
-                      : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
-                    }
-                  `}
-                >
-                  <cat.icon className={`h-4 w-4 ${isActive ? "text-primary-foreground" : "text-muted-foreground group-hover:text-primary"}`} />
-                  {cat.label}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Cards grid */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.35 }}
-              className={`grid gap-4 ${
-                activeCategory.features.length <= 2
-                  ? "grid-cols-1 md:grid-cols-2"
-                  : "grid-cols-1 md:grid-cols-2"
-              }`}
-            >
-              {activeCategory.features.map((feature, i) => {
-                const isFeatured = feature.featured;
-                return (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: i * 0.08 }}
-                    className={`
-                      group relative rounded-2xl border p-6 transition-all duration-300 overflow-hidden
-                      ${isFeatured
-                        ? "bg-foreground text-background border-foreground/80 shadow-elevated md:col-span-2"
-                        : "bg-card border-border hover:border-primary/30 hover:shadow-card"
-                      }
-                    `}
-                  >
-                    {/* Glow on featured */}
-                    {isFeatured && (
-                      <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
-                    )}
-
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-3">
-                        <div
-                          className={`p-2.5 rounded-xl ${
-                            isFeatured ? "bg-accent/20" : "bg-primary/10"
-                          }`}
-                        >
-                          <feature.icon
-                            className={`h-5 w-5 ${isFeatured ? "text-accent" : "text-primary"}`}
-                          />
-                        </div>
-                        <Badge label={feature.badge.label} color={feature.badge.color} />
-                      </div>
-
-                      <h3
-                        className={`text-lg font-bold mb-1.5 ${
-                          isFeatured ? "text-background" : "text-foreground"
-                        }`}
-                      >
-                        {feature.title}
-                      </h3>
-                      <p
-                        className={`text-sm leading-relaxed ${
-                          isFeatured ? "text-background/70" : "text-muted-foreground"
-                        }`}
-                      >
-                        {feature.description}
-                      </p>
-
-                      {feature.visual && feature.visual}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Bottom note */}
-          <motion.p
-            className="text-center text-sm text-muted-foreground mt-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
-            Funcionalidades principais disponíveis{" "}
-            <span className="font-semibold text-foreground">gratuitamente</span>. Recursos avançados
-            desbloqueados nos planos pagos.
-          </motion.p>
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((cat, idx) => {
+            const isActive = activeIdx === idx;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveIdx(idx)}
+                className={`
+                  group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
+                  ${isActive
+                    ? "bg-primary text-primary-foreground shadow-glow"
+                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
+                  }
+                `}
+              >
+                <cat.icon className={`h-4 w-4 ${isActive ? "text-primary-foreground" : "text-muted-foreground group-hover:text-primary"}`} />
+                {cat.label}
+              </button>
+            );
+          })}
         </div>
+
+        {/* Main content area with themed background */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory.id}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.4 }}
+            className={`relative rounded-3xl overflow-hidden ${activeCategory.bg} max-w-6xl mx-auto`}
+          >
+            {/* Decorative elements */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+
+            <div className="relative z-10 flex flex-col lg:flex-row">
+              {/* Left arrow */}
+              <button
+                onClick={goPrev}
+                className="hidden lg:flex items-center justify-center w-14 flex-shrink-0 hover:bg-white/5 transition-colors group"
+                aria-label="Anterior"
+              >
+                <ChevronLeft className="h-6 w-6 text-white/30 group-hover:text-white/70 transition-colors" />
+              </button>
+
+              {/* Left: Impact text */}
+              <div className="lg:w-[340px] flex-shrink-0 p-8 lg:py-12 lg:pl-4 lg:pr-6 flex flex-col justify-center">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                >
+                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${activeCategory.accentBg} border ${activeCategory.accentBorder} mb-6`}>
+                    <activeCategory.icon className={`h-3.5 w-3.5 ${activeCategory.accentText}`} />
+                    <span className={`text-xs font-semibold ${activeCategory.accentText}`}>{activeCategory.label}</span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-extrabold text-white leading-tight mb-4">
+                    {activeCategory.impactHeadline}
+                  </h3>
+                  <p className="text-sm lg:text-base text-white/50 leading-relaxed">
+                    {activeCategory.impactSub}
+                  </p>
+                  <div className="mt-6 flex items-center gap-3">
+                    <span className={`text-4xl font-black ${activeCategory.accentText}`}>
+                      {activeCategory.features.length}
+                    </span>
+                    <span className="text-sm text-white/40 leading-tight">
+                      recursos<br />nesta categoria
+                    </span>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Right: Cards grid */}
+              <div className="flex-1 p-6 lg:py-10 lg:pr-4 lg:pl-2">
+                <div className={`grid gap-3 ${activeCategory.features.length <= 2 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+                  {activeCategory.features.map((feature, i) => {
+                    const isFeatured = (feature as any).featured;
+                    return (
+                      <motion.div
+                        key={feature.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.35, delay: i * 0.08 }}
+                        className={`
+                          group relative rounded-xl border p-5 transition-all duration-300 overflow-hidden
+                          ${isFeatured
+                            ? `bg-white/[0.08] backdrop-blur-sm border-white/[0.12] md:col-span-2`
+                            : "bg-white/[0.04] backdrop-blur-sm border-white/[0.06] hover:bg-white/[0.07] hover:border-white/[0.1]"
+                          }
+                        `}
+                      >
+                        {isFeatured && (
+                          <div className={`absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none opacity-10`}
+                            style={{ background: `hsl(var(--accent))` }} />
+                        )}
+
+                        <div className="relative z-10">
+                          <div className="flex items-start justify-between mb-3">
+                            <div className={`p-2 rounded-lg ${activeCategory.accentBg}`}>
+                              <feature.icon className={`h-4 w-4 ${activeCategory.accentText}`} />
+                            </div>
+                            <Badge label={feature.badge.label} color={feature.badge.color} />
+                          </div>
+
+                          <h4 className="text-base font-bold text-white mb-1">
+                            {feature.title}
+                          </h4>
+                          <p className="text-xs text-white/50 leading-relaxed">
+                            {feature.description}
+                          </p>
+
+                          {feature.visual && feature.visual}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Right arrow */}
+              <button
+                onClick={goNext}
+                className="hidden lg:flex items-center justify-center w-14 flex-shrink-0 hover:bg-white/5 transition-colors group"
+                aria-label="Próximo"
+              >
+                <ChevronRight className="h-6 w-6 text-white/30 group-hover:text-white/70 transition-colors" />
+              </button>
+            </div>
+
+            {/* Mobile arrows */}
+            <div className="flex lg:hidden justify-center gap-4 pb-6">
+              <button onClick={goPrev} className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
+                <ChevronLeft className="h-5 w-5 text-white/50" />
+              </button>
+              {/* Dots */}
+              <div className="flex items-center gap-2">
+                {categories.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveIdx(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      activeIdx === idx ? `w-6 ${activeCategory.accentBg.replace('/15', '')}` : "w-2 bg-white/20"
+                    }`}
+                  />
+                ))}
+              </div>
+              <button onClick={goNext} className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
+                <ChevronRight className="h-5 w-5 text-white/50" />
+              </button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Bottom note */}
+        <motion.p
+          className="text-center text-sm text-muted-foreground mt-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          Funcionalidades principais disponíveis{" "}
+          <span className="font-semibold text-foreground">gratuitamente</span>. Recursos avançados
+          desbloqueados nos planos pagos.
+        </motion.p>
       </div>
     </section>
   );
