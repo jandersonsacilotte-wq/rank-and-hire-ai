@@ -20,9 +20,12 @@ const DifferentialSection = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
+            <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+              Ferramentas genéricas não entendem recrutamento
+            </p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Não é apenas triagem.{" "}
-              <span className="text-gradient">É inteligência de decisão.</span>
+              Por que o FiltrAI e não{" "}
+              <span className="text-gradient">outra solução?</span>
             </h2>
           </motion.div>
 
@@ -43,6 +46,21 @@ const DifferentialSection = () => {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="mt-10 text-center"
+          >
+            <a
+              href="#planos"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+            >
+              Ver Comparativo
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

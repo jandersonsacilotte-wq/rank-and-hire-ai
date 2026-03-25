@@ -59,12 +59,22 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center mb-16"
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            Enquanto você lê currículos, seu concorrente já contratou
+          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Como funciona
+            3 passos para nunca mais perder um{" "}
+            <span className="text-gradient">talento ideal</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Três passos simples para transformar triagem em inteligência.
           </p>
+          <a
+            href="#planos"
+            className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+          >
+            Começar Agora
+          </a>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

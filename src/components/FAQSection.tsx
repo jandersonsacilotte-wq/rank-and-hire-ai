@@ -60,8 +60,12 @@ const FAQSection = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+            Não deixe uma dúvida travar sua decisão
+          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Perguntas frequentes
+            Tire suas dúvidas em{" "}
+            <span className="text-gradient">segundos</span>
           </h2>
         </motion.div>
 
@@ -88,6 +92,21 @@ const FAQSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="mt-10 text-center"
+        >
+          <a
+            href="#planos"
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+          >
+            Falar com Especialista
+          </a>
         </motion.div>
       </div>
     </section>

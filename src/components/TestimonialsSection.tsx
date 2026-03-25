@@ -88,9 +88,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
-          <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary mb-4">
-            Depoimentos
-          </span>
+          <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+            Não acredite em nós — ouça quem já transformou o RH
+          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Quem usa, <span className="text-gradient">recomenda</span>
           </h2>
@@ -173,6 +173,21 @@ const TestimonialsSection = () => {
               />
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="mt-8 text-center"
+          >
+            <a
+              href="#planos"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+            >
+              Testar Grátis por 7 Dias
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -20,8 +20,12 @@ const BenefitsSection = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center mb-16"
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+            Triagem manual custa caro — em tempo e em talentos perdidos
+          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Benefícios que transformam seu RH
+            Seu RH operando no{" "}
+            <span className="text-gradient">modo estratégico</span>
           </h2>
         </motion.div>
 
@@ -40,6 +44,21 @@ const BenefitsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="mt-10 text-center"
+        >
+          <a
+            href="#planos"
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+          >
+            Quero Esses Resultados
+          </a>
+        </motion.div>
       </div>
     </section>
   );
