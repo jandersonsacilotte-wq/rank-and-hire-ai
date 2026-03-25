@@ -390,7 +390,7 @@ const FeaturesSection = () => {
 
               {/* Right: Cards grid */}
               <div className="flex-1 p-6 lg:py-10 lg:pr-4 lg:pl-2">
-                <div className={`grid gap-3 ${activeCategory.features.length <= 2 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+                <div className="grid gap-3 grid-cols-1">
                   {activeCategory.features.map((feature, i) => {
                     const isFeatured = (feature as any).featured;
                     return (
@@ -402,7 +402,7 @@ const FeaturesSection = () => {
                         className={`
                           group relative rounded-xl border p-5 transition-all duration-300 overflow-hidden
                           ${isFeatured
-                            ? `bg-white/[0.08] backdrop-blur-sm border-white/[0.12] md:col-span-2`
+                            ? `bg-white/[0.08] backdrop-blur-sm border-white/[0.12]`
                             : "bg-white/[0.04] backdrop-blur-sm border-white/[0.06] hover:bg-white/[0.07] hover:border-white/[0.1]"
                           }
                         `}
@@ -414,8 +414,8 @@ const FeaturesSection = () => {
 
                         <div className="relative z-10">
                           <div className="flex items-start justify-between mb-3">
-                            <div className={`p-2 rounded-lg ${isFeatured ? 'bg-white/10' : activeCategory.accentBg}`}>
-                              <feature.icon className={`h-4 w-4 ${isFeatured ? 'text-white' : activeCategory.accentText}`} />
+                            <div className={`p-2 rounded-lg ${activeCategory.accentBg}`}>
+                              <feature.icon className={`h-4 w-4 ${activeCategory.accentText}`} />
                             </div>
                             <Badge label={feature.badge.label} color={feature.badge.color} />
                           </div>
