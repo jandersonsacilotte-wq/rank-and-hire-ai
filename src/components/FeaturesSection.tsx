@@ -172,7 +172,9 @@ const categories = [
           </div>
         ),
       },
-    ],
+  },
+  {
+    id: "colaboracao",
     label: "Colaboração & CRM",
     icon: Users,
     bg: "bg-gradient-to-br from-emerald-950 via-[hsl(160,30%,10%)] to-[hsl(170,25%,7%)]",
