@@ -172,6 +172,7 @@ const categories = [
           </div>
         ),
       },
+    ],
   },
   {
     id: "colaboracao",
