@@ -342,7 +342,7 @@ const FeaturesSection = () => {
                   }
                 `}
               >
-                <cat.icon className={`h-4 w-4 ${isActive ? "text-white" : `${cat.accentText} group-hover:${cat.accentText}`}`} />
+                <cat.icon className={`h-4 w-4 ${isActive ? "text-white" : cat.accentText}`} />
                 {cat.label}
               </button>
             );
