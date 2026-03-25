@@ -83,7 +83,7 @@ const Footer = () => {
               </a>
               <div className="flex flex-col gap-2 sm:flex-row">
                 <Button size="sm" className="text-xs bg-accent hover:bg-accent/90">
-                  Solicitar Demonstração
+                  Testar Agora
                 </Button>
                 <Button size="sm" variant="outline" className="text-xs border-white/20 text-white hover:bg-white/10 hover:text-white">
                   Agendar Apresentação
