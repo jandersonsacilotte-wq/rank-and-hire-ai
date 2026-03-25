@@ -129,6 +129,24 @@ const categories = [
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
       {
+        title: "Múltiplas Vagas Simultâneas",
+        description: "Gerencie diversos processos seletivos ao mesmo tempo. Cada vaga tem ranking, critérios e banco isolados.",
+        icon: Layers,
+        badge: { label: "PRO", color: "amber" as const },
+      },
+      {
+        title: "Vaga Online (Link Público)",
+        description: "Gere um link público para sua vaga. Candidatos se inscrevem e entram no ranking automaticamente.",
+        icon: Globe,
+        badge: { label: "PRO", color: "amber" as const },
+        visual: (
+          <div className="mt-4 flex items-center gap-2 rounded-lg bg-sky-500/5 border border-sky-500/15 p-2.5">
+            <Globe className="h-4 w-4 text-sky-400 flex-shrink-0" />
+            <span className="text-[10px] text-sky-300 font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
+          </div>
+        ),
+      },
+      {
         title: "Ranking Automático",
         description: "Candidatos organizados do mais ao menos aderente. Comece pelos que importam, sem ler um currículo.",
         icon: TrendingUp,
@@ -154,28 +172,7 @@ const categories = [
           </div>
         ),
       },
-      {
-        title: "Múltiplas Vagas Simultâneas",
-        description: "Gerencie diversos processos seletivos ao mesmo tempo. Cada vaga tem ranking, critérios e banco isolados.",
-        icon: Layers,
-        badge: { label: "PRO", color: "amber" as const },
-      },
-      {
-        title: "Vaga Online (Link Público)",
-        description: "Gere um link público para sua vaga. Candidatos se inscrevem e entram no ranking automaticamente.",
-        icon: Globe,
-        badge: { label: "PRO", color: "amber" as const },
-        visual: (
-          <div className="mt-4 flex items-center gap-2 rounded-lg bg-sky-500/5 border border-sky-500/15 p-2.5">
-            <Globe className="h-4 w-4 text-sky-400 flex-shrink-0" />
-            <span className="text-[10px] text-sky-300 font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
-          </div>
-        ),
-      },
     ],
-  },
-  {
-    id: "colaboracao",
     label: "Colaboração & CRM",
     icon: Users,
     bg: "bg-gradient-to-br from-emerald-950 via-[hsl(160,30%,10%)] to-[hsl(170,25%,7%)]",
@@ -205,6 +202,12 @@ const categories = [
         ),
       },
       {
+        title: "Comparador Lado a Lado",
+        description: "Compare 2 ou 3 finalistas num único painel. Ideal para decidir entre perfis similares antes da entrevista.",
+        icon: GitCompareArrows,
+        badge: { label: "GRÁTIS", color: "green" as const },
+      },
+      {
         title: "Compartilhamento de Ranking",
         description: "Envie um link seguro e apresentável do ranking para clientes ou gestores, sem expor o painel interno.",
         icon: Share2,
@@ -219,12 +222,6 @@ const categories = [
             </div>
           </div>
         ),
-      },
-      {
-        title: "Comparador Lado a Lado",
-        description: "Compare 2 ou 3 finalistas num único painel. Ideal para decidir entre perfis similares antes da entrevista.",
-        icon: GitCompareArrows,
-        badge: { label: "GRÁTIS", color: "green" as const },
       },
     ],
   },
