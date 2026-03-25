@@ -52,6 +52,7 @@ const categories = [
     tabBg: "bg-violet-600",
     impactHeadline: "IA que lê, interpreta e classifica.",
     impactSub: "Seus 87 currículos analisados em 3 minutos — não em 3 dias.",
+    ctaLabel: "Testar a IA Gratuitamente",
     features: [
       {
         title: "Score de Aderência IA",
@@ -132,6 +133,7 @@ const categories = [
     tabBg: "bg-sky-600",
     impactHeadline: "Do upload à shortlist em minutos.",
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
+    ctaLabel: "Criar Minha Primeira Vaga",
     features: [
       {
         title: "Múltiplas Vagas Simultâneas",
@@ -190,6 +192,7 @@ const categories = [
     tabBg: "bg-rose-600",
     impactHeadline: "Compartilhe decisões, não planilhas.",
     impactSub: "Ranking compartilhável, banco de talentos e comparação lado a lado — tudo num clique.",
+    ctaLabel: "Montar Meu Banco de Talentos",
     features: [
       {
         title: "Banco de Talentos (CRM)",
@@ -245,6 +248,7 @@ const categories = [
     tabBg: "bg-amber-600",
     impactHeadline: "Dados que vendem seu trabalho.",
     impactSub: "Relatórios por candidato e rankings compartilháveis que impressionam gestores e clientes.",
+    ctaLabel: "Ver Exemplo de Relatório",
     features: [
       {
         title: "Relatório por Candidato",
@@ -305,6 +309,7 @@ const categories = [
     tabBg: "bg-teal-600",
     impactHeadline: "Triagem por conversa, não por formulário.",
     impactSub: "Envie WhatsApp para seus candidatos e receba respostas em áudio. Triagem certeira de quem avança e quem fica no caminho.",
+    ctaLabel: "Quero Ser Avisado do Lançamento",
     features: [
       {
         title: "Mensagem Automática via WhatsApp",
@@ -459,9 +464,15 @@ const FeaturesSection = () => {
                   <h3 className="text-2xl lg:text-3xl font-extrabold text-white leading-tight mb-4">
                     {activeCategory.impactHeadline}
                   </h3>
-                  <p className="text-sm lg:text-base text-white/50 leading-relaxed">
+                   <p className="text-sm lg:text-base text-white/50 leading-relaxed mb-6">
                     {activeCategory.impactSub}
                   </p>
+                  <a
+                    href="#planos"
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:scale-105 ${activeCategory.tabBg}`}
+                  >
+                    {activeCategory.ctaLabel}
+                  </a>
                 </motion.div>
               </div>
 
