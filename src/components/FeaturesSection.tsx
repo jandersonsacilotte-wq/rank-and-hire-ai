@@ -337,12 +337,12 @@ const FeaturesSection = () => {
                 className={`
                   group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
                   ${isActive
-                    ? "bg-primary text-primary-foreground shadow-glow"
+                    ? `${cat.tabBg} text-white shadow-lg`
                     : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
                   }
                 `}
               >
-                <cat.icon className={`h-4 w-4 ${isActive ? "text-primary-foreground" : "text-muted-foreground group-hover:text-primary"}`} />
+                <cat.icon className={`h-4 w-4 ${isActive ? "text-white" : `${cat.accentText} group-hover:${cat.accentText}`}`} />
                 {cat.label}
               </button>
             );
