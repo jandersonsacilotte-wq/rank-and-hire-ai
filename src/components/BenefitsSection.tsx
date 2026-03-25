@@ -13,6 +13,19 @@ const BenefitsSection = () => {
   return (
     <section id="beneficios" className="py-12 md:py-24 bg-section-4">
       <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Seu RH operando no{" "}
+            <span className="text-gradient">modo estratégico</span>
+          </h2>
+        </motion.div>
+
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4">
           {benefits.map((b, i) => (
             <motion.div
@@ -30,31 +43,18 @@ const BenefitsSection = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center mt-16"
-        >
-          <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
-            Triagem manual custa caro — em tempo e em talentos perdidos
-          </p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Seu RH operando no{" "}
-            <span className="text-gradient">modo estratégico</span>
-          </h2>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.4 }}
           className="mt-10 text-center"
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
+            Triagem manual custa caro — em tempo e em talentos perdidos
+          </p>
           <a
             href="#planos"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+            className="mt-4 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
           >
             Quero Esses Resultados
           </a>

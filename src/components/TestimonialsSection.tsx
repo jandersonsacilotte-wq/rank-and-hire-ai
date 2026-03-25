@@ -81,6 +81,21 @@ const TestimonialsSection = () => {
   return (
     <section className="py-12 md:py-24 bg-section-5">
       <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-3xl text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Quem usa, <span className="text-gradient">recomenda</span>
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Veja como o FiltrAI está transformando o recrutamento em empresas de diferentes setores.
+          </p>
+        </motion.div>
+
         <div className="relative mx-auto max-w-2xl">
           {/* Navigation arrows */}
           <button
@@ -157,24 +172,18 @@ const TestimonialsSection = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto max-w-3xl text-center mt-12"
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="mt-8 text-center"
           >
             <p className="text-sm font-semibold uppercase tracking-widest text-destructive mb-3">
               Não acredite em nós — ouça quem já transformou o RH
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Quem usa, <span className="text-gradient">recomenda</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Veja como o FiltrAI está transformando o recrutamento em empresas de diferentes setores.
-            </p>
             <a
               href="#planos"
-              className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+              className="mt-4 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card hover:bg-primary/90 hover:scale-105 transition-all duration-300"
             >
               Testar Grátis por 7 Dias
             </a>
