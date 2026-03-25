@@ -184,6 +184,7 @@ const categories = [
     accentText: "text-emerald-400",
     accentBg: "bg-emerald-500/15",
     accentBorder: "border-emerald-500/30",
+    tabBg: "bg-emerald-600",
     impactHeadline: "Compartilhe decisões, não planilhas.",
     impactSub: "Ranking compartilhável, banco de talentos e comparação lado a lado — tudo num clique.",
     features: [
