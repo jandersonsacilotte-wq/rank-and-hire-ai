@@ -77,25 +77,6 @@ const categories = [
         ),
       },
       {
-        title: "Veredito Executivo da IA",
-        description:
-          "A IA gera uma síntese estratégica: perfil ideal, candidatos recomendados e pontos de atenção — em linguagem executiva.",
-        icon: Sparkles,
-        badge: { label: "PRO", color: "amber" as const },
-        featured: true,
-        visual: (
-          <div className="mt-4 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3">
-            <p className="text-[11px] text-violet-300/80 italic leading-relaxed">
-              "Selecionei o candidato mais aderente entre 87 currículos. Recomendo priorizar os 3 primeiros com score acima de 85."
-            </p>
-            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-violet-400/50">
-              <Clock className="h-3 w-3" />
-              Gerado em 3 min
-            </div>
-          </div>
-        ),
-      },
-      {
         title: "Critérios Eliminatórios",
         description: "Defina filtros obrigatórios por vaga. A IA classifica automaticamente: aprovado, atenção ou eliminado.",
         icon: ShieldCheck,
@@ -115,6 +96,25 @@ const categories = [
           </div>
         ),
       },
+      {
+        title: "Veredito Executivo da IA",
+        description:
+          "A IA gera uma síntese estratégica: perfil ideal, candidatos recomendados e pontos de atenção — em linguagem executiva.",
+        icon: Sparkles,
+        badge: { label: "PRO", color: "amber" as const },
+        featured: true,
+        visual: (
+          <div className="mt-4 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3">
+            <p className="text-[11px] text-violet-300/80 italic leading-relaxed">
+              "Selecionei o candidato mais aderente entre 87 currículos. Recomendo priorizar os 3 primeiros com score acima de 85."
+            </p>
+            <div className="flex items-center gap-1.5 mt-2 text-[10px] text-violet-400/50">
+              <Clock className="h-3 w-3" />
+              Gerado em 3 min
+            </div>
+          </div>
+        ),
+      },
     ],
   },
   {
@@ -128,6 +128,24 @@ const categories = [
     impactHeadline: "Do upload à shortlist em minutos.",
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
+      {
+        title: "Múltiplas Vagas Simultâneas",
+        description: "Gerencie diversos processos seletivos ao mesmo tempo. Cada vaga tem ranking, critérios e banco isolados.",
+        icon: Layers,
+        badge: { label: "PRO", color: "amber" as const },
+      },
+      {
+        title: "Vaga Online (Link Público)",
+        description: "Gere um link público para sua vaga. Candidatos se inscrevem e entram no ranking automaticamente.",
+        icon: Globe,
+        badge: { label: "PRO", color: "amber" as const },
+        visual: (
+          <div className="mt-4 flex items-center gap-2 rounded-lg bg-sky-500/5 border border-sky-500/15 p-2.5">
+            <Globe className="h-4 w-4 text-sky-400 flex-shrink-0" />
+            <span className="text-[10px] text-sky-300 font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
+          </div>
+        ),
+      },
       {
         title: "Ranking Automático",
         description: "Candidatos organizados do mais ao menos aderente. Comece pelos que importam, sem ler um currículo.",
@@ -151,24 +169,6 @@ const categories = [
                 <span className="text-[10px] font-bold text-sky-200 w-6 text-right">{c.score}</span>
               </div>
             ))}
-          </div>
-        ),
-      },
-      {
-        title: "Múltiplas Vagas Simultâneas",
-        description: "Gerencie diversos processos seletivos ao mesmo tempo. Cada vaga tem ranking, critérios e banco isolados.",
-        icon: Layers,
-        badge: { label: "PRO", color: "amber" as const },
-      },
-      {
-        title: "Vaga Online (Link Público)",
-        description: "Gere um link público para sua vaga. Candidatos se inscrevem e entram no ranking automaticamente.",
-        icon: Globe,
-        badge: { label: "PRO", color: "amber" as const },
-        visual: (
-          <div className="mt-4 flex items-center gap-2 rounded-lg bg-sky-500/5 border border-sky-500/15 p-2.5">
-            <Globe className="h-4 w-4 text-sky-400 flex-shrink-0" />
-            <span className="text-[10px] text-sky-300 font-medium truncate">filtrai.com.br/vaga/mkt-senior</span>
           </div>
         ),
       },
@@ -205,6 +205,12 @@ const categories = [
         ),
       },
       {
+        title: "Comparador Lado a Lado",
+        description: "Compare 2 ou 3 finalistas num único painel. Ideal para decidir entre perfis similares antes da entrevista.",
+        icon: GitCompareArrows,
+        badge: { label: "GRÁTIS", color: "green" as const },
+      },
+      {
         title: "Compartilhamento de Ranking",
         description: "Envie um link seguro e apresentável do ranking para clientes ou gestores, sem expor o painel interno.",
         icon: Share2,
@@ -219,12 +225,6 @@ const categories = [
             </div>
           </div>
         ),
-      },
-      {
-        title: "Comparador Lado a Lado",
-        description: "Compare 2 ou 3 finalistas num único painel. Ideal para decidir entre perfis similares antes da entrevista.",
-        icon: GitCompareArrows,
-        badge: { label: "GRÁTIS", color: "green" as const },
       },
     ],
   },
@@ -390,7 +390,7 @@ const FeaturesSection = () => {
 
               {/* Right: Cards grid */}
               <div className="flex-1 p-6 lg:py-10 lg:pr-4 lg:pl-2">
-                <div className="grid gap-3 grid-cols-1">
+                <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
                   {activeCategory.features.map((feature, i) => {
                     const isFeatured = (feature as any).featured;
                     return (
@@ -402,7 +402,7 @@ const FeaturesSection = () => {
                         className={`
                           group relative rounded-xl border p-5 transition-all duration-300 overflow-hidden
                           ${isFeatured
-                            ? `bg-white/[0.08] backdrop-blur-sm border-white/[0.12]`
+                            ? `bg-white/[0.08] backdrop-blur-sm border-white/[0.12] md:col-span-2`
                             : "bg-white/[0.04] backdrop-blur-sm border-white/[0.06] hover:bg-white/[0.07] hover:border-white/[0.1]"
                           }
                         `}
