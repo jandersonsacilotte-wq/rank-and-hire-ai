@@ -126,6 +126,7 @@ const categories = [
     accentText: "text-sky-400",
     accentBg: "bg-sky-500/15",
     accentBorder: "border-sky-500/30",
+    tabBg: "bg-sky-600",
     impactHeadline: "Do upload à shortlist em minutos.",
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
