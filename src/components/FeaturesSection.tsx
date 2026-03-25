@@ -17,6 +17,8 @@ import {
   Users,
   Eye,
   MessageCircle,
+  Mic,
+  AudioLines,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -175,27 +177,6 @@ const categories = [
           </div>
         ),
       },
-      {
-        title: "Triagem Conversacional",
-        description: "Envie mensagens via WhatsApp para seus candidatos e faça uma triagem certeira — identifique quem avança e quem fica no caminho, direto pelo canal que eles já usam.",
-        icon: MessageCircle,
-        badge: { label: "EM CONSTRUÇÃO", color: "amber" as const },
-        visual: (
-          <div className="mt-4 rounded-lg bg-sky-500/10 border border-sky-500/20 p-3">
-            <div className="flex items-start gap-2">
-              <MessageCircle className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-              <div className="space-y-1.5">
-                <div className="bg-emerald-500/15 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[85%]">
-                  <p className="text-[10px] text-emerald-300">"Olá Ana! Você tem disponibilidade para início imediato?"</p>
-                </div>
-                <div className="bg-white/10 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[70%]">
-                  <p className="text-[10px] text-white/70">"Sim, posso começar na próxima semana!"</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
-      },
     ],
   },
   {
@@ -306,6 +287,76 @@ const categories = [
               <div key={stat.label} className="rounded-lg bg-amber-500/10 p-2">
                 <div className="text-lg font-bold text-amber-400">{stat.value}</div>
                 <div className="text-[9px] text-amber-300/50">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    id: "conversacional",
+    label: "Conversacional",
+    icon: MessageCircle,
+    bg: "bg-gradient-to-br from-teal-950 via-[hsl(175,35%,10%)] to-[hsl(180,30%,7%)]",
+    accentText: "text-teal-400",
+    accentBg: "bg-teal-500/15",
+    accentBorder: "border-teal-500/30",
+    tabBg: "bg-teal-600",
+    impactHeadline: "Triagem por conversa, não por formulário.",
+    impactSub: "Envie WhatsApp para seus candidatos e receba respostas em áudio. Triagem certeira de quem avança e quem fica no caminho.",
+    features: [
+      {
+        title: "Mensagem Automática via WhatsApp",
+        description: "Dispare perguntas personalizadas direto no WhatsApp do candidato. Sem formulários, sem fricção — no canal que ele já usa.",
+        icon: MessageCircle,
+        badge: { label: "EM CONSTRUÇÃO", color: "amber" as const },
+        visual: (
+          <div className="mt-4 rounded-lg bg-teal-500/10 border border-teal-500/20 p-3">
+            <div className="space-y-2">
+              <div className="bg-teal-500/15 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[90%]">
+                <p className="text-[10px] text-teal-300">"Oi Ana! Me fale um pouco mais sobre suas experiências? Pode ser um áudio de até 2 minutos 🎙️"</p>
+              </div>
+              <div className="bg-white/10 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[75%] flex items-center gap-2">
+                <Mic className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" />
+                <div className="flex-1 flex items-center gap-[2px]">
+                  {[3,5,8,12,7,10,14,6,9,13,5,11,8,15,7,10,4,12,9,6,14,8,11,5,13,7,10,15,6,9].map((h, i) => (
+                    <div
+                      key={i}
+                      className="w-[3px] rounded-full bg-emerald-400/70"
+                      style={{ height: `${h}px` }}
+                    />
+                  ))}
+                </div>
+                <span className="text-[9px] text-white/50 flex-shrink-0">1:47</span>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Análise de Respostas por IA",
+        description: "A IA transcreve e analisa as respostas dos candidatos, gerando insights sobre perfil, comunicação e aderência à vaga.",
+        icon: Brain,
+        badge: { label: "EM CONSTRUÇÃO", color: "amber" as const },
+      },
+      {
+        title: "Triagem Inteligente",
+        description: "Com base nas respostas, a IA classifica automaticamente quem avança no processo e quem fica no caminho — sem viés, sem achismo.",
+        icon: AudioLines,
+        badge: { label: "EM CONSTRUÇÃO", color: "amber" as const },
+        featured: true,
+        visual: (
+          <div className="mt-4 space-y-2">
+            {[
+              { name: "Ana L.", status: "Avança", cls: "bg-emerald-500/15 text-emerald-400 border-emerald-500/20" },
+              { name: "Carlos M.", status: "Avança", cls: "bg-emerald-500/15 text-emerald-400 border-emerald-500/20" },
+              { name: "Julia S.", status: "Em análise", cls: "bg-amber-500/15 text-amber-400 border-amber-500/20" },
+              { name: "Pedro R.", status: "Não avança", cls: "bg-red-500/15 text-red-400 border-red-500/20" },
+            ].map((c) => (
+              <div key={c.name} className="flex items-center justify-between">
+                <span className="text-[10px] text-white/70">{c.name}</span>
+                <span className={`text-[9px] font-semibold px-2 py-0.5 rounded-full border ${c.cls}`}>{c.status}</span>
               </div>
             ))}
           </div>
