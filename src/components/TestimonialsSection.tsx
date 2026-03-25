@@ -183,16 +183,6 @@ const TestimonialsSection = () => {
       </div>
     </section>
   );
-};
 
-            >
-              Testar Grátis por 7 Dias
-            </a>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default TestimonialsSection;
