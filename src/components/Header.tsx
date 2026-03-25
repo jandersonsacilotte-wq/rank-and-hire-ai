@@ -30,9 +30,12 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="bg-gradient-hero text-primary-foreground font-semibold shadow-glow hover:opacity-90 transition-opacity">
-            Solicitar Demo
-          </Button>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-muted-foreground">Não precisa de cartão</span>
+            <Button size="sm" className="bg-gradient-hero text-primary-foreground font-semibold shadow-glow hover:opacity-90 transition-opacity">
+              Testar Agora
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile toggle */}
@@ -59,8 +62,9 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            <span className="text-xs text-muted-foreground text-center">Não precisa de cartão</span>
             <Button size="sm" className="bg-gradient-hero text-primary-foreground font-semibold w-full">
-              Solicitar Demo
+              Testar Agora
             </Button>
           </nav>
         </div>
