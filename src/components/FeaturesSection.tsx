@@ -16,6 +16,7 @@ import {
   Layers,
   Users,
   Eye,
+  MessageCircle,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -171,6 +172,27 @@ const categories = [
                 <span className="text-[10px] font-bold text-sky-200 w-6 text-right">{c.score}</span>
               </div>
             ))}
+          </div>
+        ),
+      },
+      {
+        title: "Triagem Conversacional",
+        description: "Envie mensagens via WhatsApp para seus candidatos e faça uma triagem certeira — identifique quem avança e quem fica no caminho, direto pelo canal que eles já usam.",
+        icon: MessageCircle,
+        badge: { label: "EM CONSTRUÇÃO", color: "amber" as const },
+        visual: (
+          <div className="mt-4 rounded-lg bg-sky-500/10 border border-sky-500/20 p-3">
+            <div className="flex items-start gap-2">
+              <MessageCircle className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+              <div className="space-y-1.5">
+                <div className="bg-emerald-500/15 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[85%]">
+                  <p className="text-[10px] text-emerald-300">"Olá Ana! Você tem disponibilidade para início imediato?"</p>
+                </div>
+                <div className="bg-white/10 rounded-lg rounded-tl-none px-2.5 py-1.5 max-w-[70%]">
+                  <p className="text-[10px] text-white/70">"Sim, posso começar na próxima semana!"</p>
+                </div>
+              </div>
+            </div>
           </div>
         ),
       },
