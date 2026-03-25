@@ -183,11 +183,11 @@ const categories = [
     id: "colaboracao",
     label: "Colaboração & CRM",
     icon: Users,
-    bg: "bg-gradient-to-br from-emerald-950 via-[hsl(160,30%,10%)] to-[hsl(170,25%,7%)]",
-    accentText: "text-emerald-400",
-    accentBg: "bg-emerald-500/15",
-    accentBorder: "border-emerald-500/30",
-    tabBg: "bg-emerald-600",
+    bg: "bg-gradient-to-br from-rose-950 via-[hsl(340,30%,10%)] to-[hsl(350,25%,7%)]",
+    accentText: "text-rose-400",
+    accentBg: "bg-rose-500/15",
+    accentBorder: "border-rose-500/30",
+    tabBg: "bg-rose-600",
     impactHeadline: "Compartilhe decisões, não planilhas.",
     impactSub: "Ranking compartilhável, banco de talentos e comparação lado a lado — tudo num clique.",
     features: [
@@ -201,12 +201,12 @@ const categories = [
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className="h-8 w-8 rounded-full bg-emerald-500/10 border-2 border-emerald-500/20 flex items-center justify-center -ml-2 first:ml-0"
+                className="h-8 w-8 rounded-full bg-rose-500/10 border-2 border-rose-500/20 flex items-center justify-center -ml-2 first:ml-0"
               >
-                <span className="text-[9px] font-bold text-emerald-400">{String.fromCharCode(64 + i)}</span>
+                <span className="text-[9px] font-bold text-rose-400">{String.fromCharCode(64 + i)}</span>
               </div>
             ))}
-            <span className="text-[10px] text-emerald-400/60 ml-1">+127 perfis</span>
+            <span className="text-[10px] text-rose-400/60 ml-1">+127 perfis</span>
           </div>
         ),
       },
@@ -223,11 +223,11 @@ const categories = [
         badge: { label: "DESTAQUE", color: "purple" as const },
         featured: true,
         visual: (
-          <div className="mt-4 flex items-center gap-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 p-3">
-            <Share2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
+          <div className="mt-4 flex items-center gap-2 rounded-lg bg-rose-500/10 border border-rose-500/20 p-3">
+            <Share2 className="h-4 w-4 text-rose-400 flex-shrink-0" />
             <div className="flex-1 min-w-0">
-              <div className="text-[10px] text-emerald-300 font-medium truncate">filtrai.com.br/ranking/abc123</div>
-              <div className="text-[9px] text-emerald-400/50 mt-0.5">Link seguro • Visualização apresentável</div>
+              <div className="text-[10px] text-rose-300 font-medium truncate">filtrai.com.br/ranking/abc123</div>
+              <div className="text-[9px] text-rose-400/50 mt-0.5">Link seguro • Visualização apresentável</div>
             </div>
           </div>
         ),
