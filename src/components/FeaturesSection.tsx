@@ -46,6 +46,7 @@ const categories = [
     accentText: "text-violet-400",
     accentBg: "bg-violet-500/15",
     accentBorder: "border-violet-500/30",
+    tabBg: "bg-violet-600",
     impactHeadline: "IA que lê, interpreta e classifica.",
     impactSub: "Seus 87 currículos analisados em 3 minutos — não em 3 dias.",
     features: [
