@@ -38,6 +38,7 @@ const HeroSection = () => {
               Ver como funciona
             </Button>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">Não precisa de cartão de crédito</p>
         </motion.div>
 
         <motion.div
