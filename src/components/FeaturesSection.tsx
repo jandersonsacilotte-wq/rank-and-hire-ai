@@ -46,6 +46,7 @@ const categories = [
     accentText: "text-violet-400",
     accentBg: "bg-violet-500/15",
     accentBorder: "border-violet-500/30",
+    tabBg: "bg-violet-600",
     impactHeadline: "IA que lê, interpreta e classifica.",
     impactSub: "Seus 87 currículos analisados em 3 minutos — não em 3 dias.",
     features: [
@@ -125,6 +126,7 @@ const categories = [
     accentText: "text-sky-400",
     accentBg: "bg-sky-500/15",
     accentBorder: "border-sky-500/30",
+    tabBg: "bg-sky-600",
     impactHeadline: "Do upload à shortlist em minutos.",
     impactSub: "Gerencie múltiplas vagas, receba candidaturas por link público e veja o ranking se montar sozinho.",
     features: [
@@ -182,6 +184,7 @@ const categories = [
     accentText: "text-emerald-400",
     accentBg: "bg-emerald-500/15",
     accentBorder: "border-emerald-500/30",
+    tabBg: "bg-emerald-600",
     impactHeadline: "Compartilhe decisões, não planilhas.",
     impactSub: "Ranking compartilhável, banco de talentos e comparação lado a lado — tudo num clique.",
     features: [
@@ -236,6 +239,7 @@ const categories = [
     accentText: "text-amber-400",
     accentBg: "bg-amber-500/15",
     accentBorder: "border-amber-500/30",
+    tabBg: "bg-amber-600",
     impactHeadline: "Dados que vendem seu trabalho.",
     impactSub: "Relatórios por candidato e rankings compartilháveis que impressionam gestores e clientes.",
     features: [
@@ -333,12 +337,12 @@ const FeaturesSection = () => {
                 className={`
                   group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
                   ${isActive
-                    ? "bg-primary text-primary-foreground shadow-glow"
+                    ? `${cat.tabBg} text-white shadow-lg`
                     : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
                   }
                 `}
               >
-                <cat.icon className={`h-4 w-4 ${isActive ? "text-primary-foreground" : "text-muted-foreground group-hover:text-primary"}`} />
+                <cat.icon className={`h-4 w-4 ${isActive ? "text-white" : cat.accentText}`} />
                 {cat.label}
               </button>
             );
